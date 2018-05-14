@@ -100,9 +100,9 @@ def run_model(X_train,y_train,X_test,y_test,features):
     e_dev=error(model,X_dev,y_dev)
     e_test=error(model,X_test,y_test)
     
-    print('Training error=',e_train)
-    print('Development error=',e_dev)
-    print('Testing error=',e_test)
+    print('Training accuracy=',e_train)
+    print('Development accuracy=',e_dev)
+    print('Testing accuracy=',e_test)
     
     cm=confusion_matrix(y_test,model.predict(X_test))
     return model,cm
